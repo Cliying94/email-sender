@@ -11,7 +11,7 @@ ACCOUNT = os.getenv("ACCOUNT")
 PASSWORD = os.getenv("PASSWORD")
 email_title = "Email title"
 
-with open('email-list.csv', 'r') as csvfile:
+with open('email-list-test.csv', 'r') as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
         print(row[0])
