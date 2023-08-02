@@ -3,6 +3,7 @@ from email.mime.text import MIMEText
 import os
 from dotenv import load_dotenv
 import csv
+import time
 
 
 load_dotenv()
@@ -33,3 +34,6 @@ with open('email-list-test.csv', 'r') as csvfile:
         with smtplib.SMTP_SSL("smtp.gmail.com",465) as server:
             server.login(ACCOUNT,PASSWORD)
             server.send_message(msg)
+        
+        time.sleep(10)
+
