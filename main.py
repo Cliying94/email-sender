@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import csv
 import time
 
-
 load_dotenv()
 
 ACCOUNT = os.getenv("ACCOUNT")
@@ -22,7 +21,7 @@ with open('email-list-test.csv', 'r') as csvfile:
         msg["Subject"]= email_title
     
         # Open and read the HTML file
-        with open('html_content.html', 'r') as file:
+        with open('html-content.html', 'r') as file:
             html_content = file.read()
     
         # # Create a MIMEText object with the HTML content
